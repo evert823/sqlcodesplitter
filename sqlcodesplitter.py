@@ -38,8 +38,10 @@ class sqlcodesplitter:
                 c2 = to_c
             else:
                 c2 = len(inlist[lnr])
-            outlist.append([inlist[lnr][c1:c2],tag])
-            
+            s = inlist[lnr][c1:c2]
+            if len(s) > 0:
+                outlist.append([s,tag])
+
             lnr += 1
         return outlist
 #
